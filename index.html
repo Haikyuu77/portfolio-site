@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YourName | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Arjun</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <h1>Hello, I'm <span>Arjun Suresh</span></h1>
+    <p>Software Engineer • MS Computer Science @ USC • Seeking SDE Internships</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+      I’m a Computer Science graduate student at USC with strong experience in microservices, 
+      Java Spring Boot, Node.js, distributed systems, and large-scale data processing. 
+      I have built end-to-end solutions that handle hundreds of thousands of daily transactions.
+    </p>
+    <p>
+      I'm passionate about creating efficient, scalable solutions and applying test-driven 
+      development practices. Currently seeking Summer 2025 internship opportunities 
+      to contribute and grow in a dynamic environment.
+    </p>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-category">
+        <h3>Programming & Web</h3>
+        <ul>
+          <li>Java, Python, JavaScript, Swift, C/C++</li>
+          <li>HTML5, CSS3</li>
+          <li>Spring Boot, Flask, Node.js, React, Vue.js</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Data & Architecture</h3>
+        <ul>
+          <li>PostgreSQL, MongoDB, SQL, Redis</li>
+          <li>Microservices, Event-Driven Arch, Kafka</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Cloud & DevOps</h3>
+        <ul>
+          <li>AWS (S3, EC2, Parameter Store), GCP</li>
+          <li>Docker, Jenkins, Git, JMeter, VisualVM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>iOS Weather Search App</h3>
+      <p>
+        SwiftUI, Node.js, Tomorrow.io API  
+        <ul>
+          <li>Built real-time weather search & forecast app following MVC architecture</li>
+          <li>Deployed scalable Node.js backend on GCP with MongoDB Atlas for user preferences</li>
+          <li>Integrated HighCharts for interactive temperature trends & weekly forecasts</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>MarketSense: Real-Time Stock Trading & Analysis</h3>
+      <p>
+        Node.js, React.js, Finnhub API, Highcharts  
+        <ul>
+          <li>Developed a scalable backend for real-time trading & market analytics (Google App Engine)</li>
+          <li>Built front-end in React.js with Highcharts for interactive stock data visualization</li>
+          <li>Utilized Finnhub API for up-to-date market data and portfolio tracking</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Global Digital Health Metrics (GDHM) Tracker</h3>
+      <p>
+        Spring Boot, PostgreSQL, Vue.js, AWS RDS  
+        <ul>
+          <li>Architected a web platform to visualize 23 digital health indicators across 50+ countries</li>
+          <li>Integrated real-time data for 20+ NGOs; recognized by the World Health Organization</li>
+          <li>Ensured sub-second query performance and seamless integration with Spring Boot</li>
+        </ul>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
+
+    <div class="experience-card">
+      <h3>ThoughtWorks | Software Development Engineer</h3>
+      <h4>Aug 2022 – Present</h4>
+      <ul>
+        <li>Implemented an end-to-end reconciliation solution for a \$13B financial services client, 
+          reducing reconciliation from 1 week to under 1 hour</li>
+        <li>Architected a distributed microservices ecosystem (Spring Boot, MongoDB, Kafka) 
+          processing 350k+ transactions/day, integrating secure REST APIs (JWT, rate limiting)</li>
+        <li>Developed internal tools and ETL pipelines for large-scale data ingestion, cleaning, 
+          and transformation, ensuring readiness for next-day operations</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>ThoughtWorks | Software Developer Intern</h3>
+      <h4>Jan 2022 – Apr 2022</h4>
+      <ul>
+        <li>Collaborated on an event booking platform using Spring Boot, Postgres, and React.js; 
+          deployed on AWS for a seamless user experience</li>
+        <li>Gained proficiency in TDD, OOP, and software architecture, achieving 100% test coverage 
+          across critical modules</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>
+      Feel free to reach out if you have any opportunities or just want to connect!
+    </p>
+    <div class="contact-links">
+      <a href="sureshar@usc.edu">Email</a>
+      <a href="https://www.linkedin.com/in/suresh-arjun" target="_blank">LinkedIn</a>
+      <a href="https://github.com/haikyuu77" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- Optional JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
