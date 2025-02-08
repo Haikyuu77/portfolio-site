@@ -102,6 +102,103 @@ section h2 {
 }
 
 /* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    /* background: linear-gradient(145deg, #1e1e1e, #292929); */
+}
+
+.about-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.typewriter {
+    margin-bottom: 2rem;
+}
+
+.typed-text {
+    color: #ff9800;
+    font-size: 1.5rem;
+    border-right: 2px solid #ff9800;
+    padding-right: 5px;
+    animation: blink 0.7s infinite, type 4s steps(40);
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #d1d1d1;
+}
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.stat-label {
+    color: #d1d1d1;
+    font-size: 0.9rem;
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.interest-tag {
+    background: rgba(255,152,0,0.1);
+    color: #ff9800;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.interest-tag:hover {
+    background: rgba(255,152,0,0.2);
+    transform: translateY(-2px);
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes type {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .about-section p {
     margin-bottom: 1rem;
     max-width: 800px;
@@ -111,6 +208,74 @@ section h2 {
 }
 
 /* SKILLS SECTION */
+.skills-section {
+    padding: 4rem 0;
+    background: #1e1e1e;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-track {
+    overflow: hidden;
+}
+
+.skills-track-inner {
+    display: flex;
+    /* No gap property – use margins on items instead */
+    width: 100%;  /* Make sure this is exactly two copies */
+    animation: slideLeft 10s linear infinite;
+    padding: 2rem 0;
+}
+
+.skill-item {
+    flex: 0 0 auto;
+    /* Use margin-right for spacing; adjust as needed */
+    margin-right: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.skill-item:last-child {
+    margin-right: 0; /* Remove margin from the very last item in each copy */
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: brightness(0.9);
+}
+
+.skill-name {
+    color: #d1d1d1;
+    font-size: 1rem;
+}
+
+.skills-track-inner:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Shifts left by 50% of the container's width,
+           which should equal exactly one full copy of your items */
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments (if needed) */
+@media (max-width: 768px) {
+    .skill-item {
+        min-width: 80px;
+        margin-right: 2rem;
+    }
+}
+
 .skills-section {
     background: #1e1e1e;
     padding: 2rem;
@@ -331,48 +496,61 @@ section h2 {
 
 /* RECOMMENDATIONS SECTION */
 .recommendations-section {
-    background: #121212;
+    padding: 4rem 2rem;
+    /* background: #1e1e1e; */
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recommendation-card {
+    background: #2a2a2a;
     padding: 2rem;
-    text-align: center;
-}
-
-.recommendations-section h2 {
-    color: #ff9800;
-    margin-bottom: 2rem;
-}
-
-.recommendation {
-    background: #1e1e1e;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
 }
 
-.recommendation blockquote {
-    font-style: italic;
+.recommendation-card:hover {
+    transform: translateY(-5px);
+}
+
+.recommender-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.recommender-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recommender-details h3 {
     color: #ffffff;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
 }
 
-.recommendation p {
+.recommender-details p {
+    color: #a0a0a0;
     font-size: 0.9rem;
-    color: #ff9800;
-    margin-top: 0.5rem;
 }
 
-.recommendation a {
-    color: #ff9800;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.recommendation a:hover {
-    text-decoration: underline;
+blockquote {
+    color: #d1d1d1;
+    font-style: italic;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 3px solid #ff9800;
 }
 
 /* Contact Section */
@@ -507,5 +685,200 @@ footer {
     
     .document-card {
         padding: 1.5rem;
+    }
+}
+
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0077b5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.linkedin-link img {
+    width: 20px;
+    height: 20px;
+}
+
+.linkedin-link:hover {
+    opacity: 0.8;
+}
+
+.company-logo {
+    background-color: #121212;
+    padding: 1rem;
+    width: 130px;
+    height: 90px;
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+/* LeetCode Section */
+.leetcode-section {
+    padding: 4rem 2rem;
+    background: #1e1e1e;
+}
+
+.leetcode-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #2a2a2a;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.leetcode-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.leetcode-logo {
+    height: 40px;
+    filter: brightness(0.9);
+}
+
+.leetcode-profile-link {
+    color: #ffa116;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.leetcode-header img {
+    height: 40px;
+}
+
+.leetcode-header a {
+    color: #ffa116;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.stat-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    color: #ffa116;
+    font-weight: bold;
+}
+
+.problem-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.category {
+    color: #fff;
+}
+
+.category-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.easy .progress { background: #00b8a3; }
+.medium .progress { background: #ffc01e; }
+.hard .progress { background: #ff375f; }
+
+@media (max-width: 768px) {
+    .stat-overview {
+        grid-template-columns: 1fr;
+    }
+}
+
+.leetcode-stats {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.leetcode-stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+}
+
+.streak-flame {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    animation: flicker 1s infinite;
+}
+
+.leetcode-problems {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.problem-category {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.problem-category .count {
+    min-width: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.problem-category .label {
+    min-width: 80px;
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: currentColor;
+    opacity: 0.8;
+}
+
+.easy { color: #00b8a3; }
+.medium { color: #ffc01e; }
+.hard { color: #ff375f; }
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+    .leetcode-stats {
+        grid-template-columns: 1fr;
     }
 }
