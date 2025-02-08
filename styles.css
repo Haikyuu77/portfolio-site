@@ -1,32 +1,24 @@
-/* Basic Reset & Box Sizing */
+/* Core styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body & Font */
 body {
     font-family: 'Montserrat', sans-serif;
     color: #f8f8f8;
     line-height: 1.6;
-    background: #121212; /* Black theme background */
+    background: #121212;
 }
 
-/* Navbar */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 2rem;
-    background: #1e1e1e; /* Slightly lighter black */
+    background: #1e1e1e;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.logo {
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #ffffff;
 }
 
 .nav-links {
@@ -35,11 +27,79 @@ nav {
     gap: 1rem;
 }
 
-.nav-links li a {
-    text-decoration: none;
+.nav-links a {
     color: #d1d1d1;
-    font-weight: 500;
+    text-decoration: none;
     transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+}
+
+/* Common Components */
+.btn {
+    background: #ff9800;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
+/* Cards */
+.card {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Progress Bars */
+.progress-bar {
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Navbar */
+.logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.nav-links li a {
+    font-weight: 500;
 }
 
 .nav-links li a:hover {
@@ -55,7 +115,7 @@ nav {
 /* Hero Section */
 .hero-section {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 5.2rem 2rem;
     background: linear-gradient(145deg, #1e1e1e, #292929); /* Gradient black background */
 }
 
@@ -73,20 +133,6 @@ nav {
     font-size: 1.1rem;
     color: #d1d1d1;
     margin-bottom: 2rem;
-}
-
-.btn {
-    background: #ff9800;
-    color: #121212;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #e68900;
 }
 
 /* Section Headings */
@@ -487,7 +533,7 @@ section h2 {
     text-decoration: none;
     font-weight: 500;
     margin-right: 0.5rem;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 
 .extra-links .btn:hover {
