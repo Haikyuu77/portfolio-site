@@ -46,6 +46,12 @@ nav {
     color: #ff9800; /* Highlight color */
 }
 
+/* Navigation highlight */
+.nav-links a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
 /* Hero Section */
 .hero-section {
     text-align: center;
@@ -136,11 +142,18 @@ section h2 {
     flex-direction: column;
     align-items: center; /* Center content in the tile */
     justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .skill-tile:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.skill-tile.expanded {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .skill-tile img {
@@ -388,4 +401,111 @@ footer {
     border-top: 1px solid #292929;
     color: #d1d1d1;
     margin-top: 2rem;
+}
+
+/* Dark mode */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+}
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .nav-links a {
+    /* color: #ffffff; */
+}
+
+/* DOCUMENTS SECTION */
+.documents-section {
+    padding: 4rem 2rem;
+    background: #1e1e1e;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.document-card {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.document-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-color: #444;
+}
+
+.document-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.document-card h3 {
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+.document-card p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.document-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #4a9eff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.document-link:hover {
+    color: #66b0ff;
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-list li {
+    margin: 0.8rem 0;
+}
+
+.cert-list a {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cert-list a:hover {
+    color: #66b0ff;
+}
+
+@media (max-width: 768px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .document-card {
+        padding: 1.5rem;
+    }
 }
